@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projetos da ONG Cão Sem Dono: Resgates, cuidados médicos, vacinação, lar temporário e feiras de adoção responsável.">
+  <title>Projetos | Cão Sem Dono</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Link de Acessibilidade -->
+  <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container">
+      <a href="index.html#/" class="marca" aria-label="Ir para a página inicial">
+        <img src="imagens/logo.jpg" alt="Logo da ONG Cão Sem Dono" class="logo">
+        <h1 class="banner">Cão Sem Dono</h1>
+      </a>
+
+      <!-- MENU PRINCIPAL -->
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-lista">
+          ☰ Menu
+        </button>
+
+        <ul class="menu-lista" id="menu-lista">
+          <li><a href="index.html#/">Início</a></li>
+          <li class="tem-submenu">
+            <a href="projetos.html" class="ativo">Projetos ▾</a>
+            <ul class="submenu">
+              <li><a href="projetos.html#resgate">Resgate</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+              <li><a href="projetos.html#doacoes">Doações</a></li>
+              <li><a href="projetos.html#lar-temporario">Lar Temporário</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro & Adoção</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.html#/painel">Painel (Dados)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo-principal" class="container">
+    <section class="cabecalho-pagina">
+      <h2>Conheça Nossos Projetos</h2>
+      <p>
+        O Cão Sem Dono desenvolve ações contínuas para resgatar, cuidar e encontrar lares amorosos para cães em situação de risco.
+        Nosso trabalho depende exclusivamente da dedicação de voluntários e da generosidade de doadores.
+      </p>
+    </section>
+
+    <div class="lista-projetos">
+      <article class="card-projeto" id="resgate">
+        <div class="projeto-tag">Ação Imediata</div>
+        <h2>Projeto Resgate</h2>
+        <p>
+          Nosso projeto de resgate atua no acolhimento de cães abandonados, feridos ou em situação de maus-tratos.
+          Após a chegada ao abrigo, cada animal recebe um plano individualizado de recuperação física e psicológica.
+        </p>
+
+        <h3>Etapas e Cuidados Veterinários:</h3>
+        <ul class="lista-check">
+          <li>Alimentação nutritiva e suplementação;</li>
+          <li>Atendimento veterinário e exames laboratoriais;</li>
+          <li>Vacinação completa (Polivalente e Antirrábica);</li>
+          <li>Castração obrigatória;</li>
+          <li>Tratamentos medicamentosos e cirurgias quando necessárias.</li>
+        </ul>
+      </article>
+
+      <article class="card-projeto" id="adocao">
+        <div class="projeto-tag">Família</div>
+        <h2>Adoção Responsável</h2>
+        <p>
+          Depois de reabilitados, os animais ficam disponíveis para adoção consciente. Nosso compromisso é encontrar famílias
+          preparadas para oferecer amor, segurança e cuidados para toda a vida do animal.
+        </p>
+        <p>
+          Interessados em adotar podem preencher nosso formulário de cadastro e agendar uma entrevista com nossa equipe.
+        </p>
+        <a href="cadastro.html?ajuda=adocao" class="botao">Quero Adotar um Cão</a>
+      </article>
+
+      <article class="card-projeto" id="voluntariado">
+        <div class="projeto-tag">Comunidade</div>
+        <h2>Seja Voluntário</h2>
+        <p>
+          Os voluntários são a alma da nossa ONG. Existem diversas formas de ajudar, inclusive para quem dispõe de poucas horas semanais.
+        </p>
+
+        <h3>Como Você Pode Ajudar:</h3>
+        <ul class="lista-check">
+          <li>Passeios, recreação e banho dos cães;</li>
+          <li>Apoio em feiras de adoção nos finais de semana;</li>
+          <li>Fotografia e divulgação nas redes sociais;</li>
+          <li>Campanhas educativas sobre bem-estar animal;</li>
+          <li>Transporte solidário para consultas veterinárias.</li>
+        </ul>
+        <a href="cadastro.html?ajuda=voluntario" class="botao">Quero Ser Voluntário</a>
+      </article>
+
+      <article class="card-projeto" id="doacoes">
+        <div class="projeto-tag">Sustentabilidade</div>
+        <h2>Ajude com Doações</h2>
+        <p>
+          As doações financiam o atendimento clínico de mais de 80 animais abrigados simultaneamente. Aceitamos doações em dinheiro, ração de qualidade, cobertores, produtos de higiene e medicamentos veterinários.
+        </p>
+
+        <div class="bloco-pix">
+          <h3>Doação Instantânea via PIX:</h3>
+          <div class="chave-pix">
+            <code>doacoes@caosemdono.org</code>
+          </div>
+          <p class="pix-info">Associação Beneficente de Proteção Animal Cão Sem Dono</p>
+        </div>
+      </article>
+
+      <article class="card-projeto" id="lar-temporario">
+        <div class="projeto-tag">Acolhimento</div>
+        <h2>Lar Temporário</h2>
+        <p>
+          O lar temporário é uma ponte vital entre o resgate e o lar definitivo. Algumas pessoas recebem um animal por tempo determinado
+          durante seu pós-operatório ou reabilitação, garantindo um ambiente tranquilo e familiar.
+        </p>
+        <p>
+          A ONG fornece toda a alimentação e suporte veterinário durante a estadia.
+        </p>
+        <a href="cadastro.html?ajuda=lar-temporario" class="botao">Quero Oferecer Lar Temporário</a>
+      </article>
+    </div>
+
+    <!-- SEÇÃO FAQ COM DETAILS E SUMMARY (HTML5 SEMÂNTICO) -->
+    <section class="secao-faq">
+      <div class="cabecalho-secao">
+        <h2>Dúvidas Frequentes</h2>
+        <p>Perguntas comuns sobre nossos projetos e programas sociais.</p>
+      </div>
+
+      <details class="faq-item">
+        <summary>Como funciona a seleção para voluntários?</summary>
+        <div class="faq-conteudo">
+          <p>
+            Basta preencher o formulário de cadastro selecionando a opção "Quero ser voluntário". Nossa equipe entrará em contato para um bate-papo de alinhamento e apresentação das áreas disponíveis.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Posso visitar os cães antes de adotar?</summary>
+        <div class="faq-conteudo">
+          <p>
+            Sim! Incentivamos visitas prévias aos sábados e domingos mediante agendamento, para que você e sua família conheçam o temperamento do animal.
+          </p>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2026 Cão Sem Dono. Todos os direitos reservados. |
+        Thamiris Alves de Souza | RGM 49791052 | ADS
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

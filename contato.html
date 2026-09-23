@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a ONG Cão Sem Dono: Dúvidas, parcerias, agendamento de visitas e orientações sobre adoção consciente.">
+  <title>Contato | Cão Sem Dono</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Link de Acessibilidade -->
+  <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container">
+      <a href="index.html#/" class="marca" aria-label="Ir para a página inicial">
+        <img src="imagens/logo.jpg" alt="Logo da ONG Cão Sem Dono" class="logo">
+        <h1 class="banner">Cão Sem Dono</h1>
+      </a>
+
+      <!-- MENU PRINCIPAL -->
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-lista">
+          ☰ Menu
+        </button>
+
+        <ul class="menu-lista" id="menu-lista">
+          <li><a href="index.html#/">Início</a></li>
+          <li class="tem-submenu">
+            <a href="projetos.html">Projetos ▾</a>
+            <ul class="submenu">
+              <li><a href="projetos.html#resgate">Resgate</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+              <li><a href="projetos.html#doacoes">Doações</a></li>
+              <li><a href="projetos.html#lar-temporario">Lar Temporário</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro & Adoção</a></li>
+          <li><a href="contato.html" class="ativo">Contato</a></li>
+          <li><a href="index.html#/painel">Painel (Dados)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo-principal" class="container">
+    <section class="cabecalho-pagina">
+      <h2>Central de Atendimento</h2>
+      <p>
+        Dúvidas sobre o processo de adoção, doações ou visitas? Envie-nos uma mensagem ou utilize nossos canais oficiais abaixo.
+      </p>
+    </section>
+
+    <div class="grid">
+      <!-- CANAIS E MAPA -->
+      <div class="col-6">
+        <div class="card card-info-contato">
+          <h3>Informações de Contato</h3>
+          <p>Nossa equipe de voluntários responde mensagens em até 24 horas úteis.</p>
+
+          <ul class="lista-contato">
+            <li>
+              <strong>📍 Endereço da Sede:</strong><br>
+              Estrada dos Resgates, 450 - Zona Sul, São Paulo - SP
+            </li>
+            <li>
+              <strong>📞 Telefone / WhatsApp:</strong><br>
+              <a href="tel:+5511999999999">(11) 99999-9999</a>
+            </li>
+            <li>
+              <strong>✉️ E-mail Geral:</strong><br>
+              <a href="mailto:contato@caosemdono.org">contato@caosemdono.org</a>
+            </li>
+            <li>
+              <strong>⏰ Visitas e Triagem:</strong><br>
+              Sábados e Domingos, das 10h às 16h (mediante agendamento)
+            </li>
+          </ul>
+
+          <div class="mapa-acessivel">
+            <h4>Nossa Localização</h4>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197475141974!2d-46.6565!3d-23.5645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUyLjIiUyA0NsKwMzknMjMuNCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+              width="100%" 
+              height="200" 
+              style="border:0; border-radius: 8px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              title="Mapa da sede da ONG Cão Sem Dono">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULÁRIO DE CONTATO -->
+      <div class="col-6">
+        <form id="formContato" class="card formulario-contato" novalidate>
+          <h3>Envie uma Mensagem</h3>
+
+          <div class="campo">
+            <label for="contatoNome">Nome Completo *</label>
+            <input type="text" id="contatoNome" name="nome" required minlength="3" placeholder="Como prefere ser chamado?">
+          </div>
+
+          <div class="campo">
+            <label for="contatoEmail">E-mail *</label>
+            <input type="email" id="contatoEmail" name="email" required placeholder="seu.email@exemplo.com">
+          </div>
+
+          <div class="campo">
+            <label for="contatoAssunto">Assunto</label>
+            <select id="contatoAssunto" name="assunto">
+              <option value="Dúvida Geral">Dúvida Geral</option>
+              <option value="Adoção de Cães">Adoção de Cães</option>
+              <option value="Voluntariado">Voluntariado</option>
+              <option value="Doações e Parcerias">Doações e Parcerias</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="contatoMensagem">Mensagem *</label>
+            <textarea id="contatoMensagem" name="mensagem" rows="5" required minlength="10" placeholder="Digite sua mensagem detalhada..."></textarea>
+          </div>
+
+          <button type="submit" class="botao botao-grande">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2026 Cão Sem Dono. Todos os direitos reservados. |
+        Thamiris Alves de Souza | RGM 49791052 | ADS
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulares -->
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("formContato");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nome = form.contatoNome.value.trim();
+          const email = form.contatoEmail.value.trim();
+          const assunto = form.contatoAssunto.value;
+          const mensagem = form.contatoMensagem.value.trim();
+
+          if (!nome || !email || !mensagem) {
+            App.mostrarToast("Por favor, preencha todos os campos obrigatórios (*).", "aviso");
+            return;
+          }
+
+          StorageService.salvarMensagem({ nome, email, assunto, mensagem });
+
+          App.mostrarModal({
+            titulo: "Mensagem Recebida!",
+            mensagem: `Obrigado pelo contato, <strong>${nome}</strong>! Sua mensagem sobre <em>"${assunto}"</em> foi gravada com sucesso. Nossa equipe entrará em contato em breve.`,
+            botaoTexto: "Entendido"
+          });
+
+          App.mostrarToast("Mensagem enviada com sucesso!", "sucesso");
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
