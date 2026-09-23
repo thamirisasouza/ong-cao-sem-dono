@@ -135,17 +135,41 @@ const App = (function () {
     }
 
     /**
+     * Configura o Modo de Alto Contraste (Acessibilidade WCAG 2.1)
+     */
+    function configurarAltoContraste() {
+        const btnContraste = document.getElementById("btn-contraste");
+        const salvo = localStorage.getItem("ong_alto_contraste") === "true";
+
+        if (salvo) {
+            document.body.classList.add("alto-contraste");
+        }
+
+        if (btnContraste) {
+            btnContraste.addEventListener("click", function () {
+                document.body.classList.toggle("alto-contraste");
+                const ativo = document.body.classList.contains("alto-contraste");
+                localStorage.setItem("ong_alto_contraste", ativo ? "true" : "false");
+                btnContraste.setAttribute("aria-pressed", ativo);
+                mostrarToast(ativo ? "Modo Alto Contraste ativado 🌓" : "Modo Padrão ativado ☀️", "aviso");
+            });
+        }
+    }
+
+    /**
      * Inicialização geral do sistema
      */
     function inicializar() {
         configurarMenuMobile();
+        configurarAltoContraste();
         Router.iniciar();
     }
 
     return {
         inicializar,
         mostrarToast,
-        mostrarModal
+        mostrarModal,
+        configurarAltoContraste
     };
 })();
 
