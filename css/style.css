@@ -1072,3 +1072,91 @@ footer p {
         bottom: 16px;
     }
 }
+
+/* ==================================================
+   ACESSIBILIDADE: MODO ALTO CONTRASTE (WCAG 2.1 AA/AAA)
+================================================== */
+.btn-contraste {
+    background-color: var(--cor-grafite);
+    color: var(--cor-branco);
+    border: 2px solid var(--cor-cinza-claro);
+    padding: 6px 14px;
+    font-size: var(--fonte-pequena);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-contraste:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-grafite);
+    border-color: var(--cor-primaria);
+}
+
+body.alto-contraste {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste .card,
+body.alto-contraste .formulario-ong,
+body.alto-contraste .formulario-contato,
+body.alto-contraste .cabecalho-pagina,
+body.alto-contraste .secao-faq,
+body.alto-contraste .estatisticas-canvas-container,
+body.alto-contraste .modal-dialogo,
+body.alto-contraste .menu-lista,
+body.alto-contraste .submenu {
+    background-color: #121212 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFF00 !important;
+}
+
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste h4,
+body.alto-contraste strong,
+body.alto-contraste legend,
+body.alto-contraste label {
+    color: #FFFF00 !important;
+}
+
+body.alto-contraste p,
+body.alto-contraste span,
+body.alto-contraste small,
+body.alto-contraste li {
+    color: #FFFFFF !important;
+}
+
+body.alto-contraste a {
+    color: #00FFFF !important;
+    text-decoration: underline !important;
+}
+
+body.alto-contraste button,
+body.alto-contraste .botao {
+    background-color: #FFFF00 !important;
+    color: #000000 !important;
+    border: 2px solid #FFFFFF !important;
+    font-weight: 900 !important;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste textarea {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFF00 !important;
+}
+
+body.alto-contraste *:focus-visible {
+    outline: 4px solid #FFFF00 !important;
+    outline-offset: 4px !important;
+}
