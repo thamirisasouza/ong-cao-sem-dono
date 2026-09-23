@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de cadastro para voluntariado, doações, lar temporário e adoção de animais resgatados da ONG Cão Sem Dono.">
+  <title>Cadastro & Adoção | Cão Sem Dono</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- Link de Acessibilidade -->
+  <a href="#conteudo-principal" class="pular-navegacao">Pular para o conteúdo principal</a>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container">
+      <a href="../index.html#/" class="marca" aria-label="Ir para a página inicial">
+        <img src="../imagens/logo.jpg" alt="Logo da ONG Cão Sem Dono" class="logo">
+        <h1 class="banner">Cão Sem Dono</h1>
+      </a>
+
+      <!-- MENU PRINCIPAL -->
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-lista">
+          ☰ Menu
+        </button>
+
+        <ul class="menu-lista" id="menu-lista">
+          <li><a href="../index.html#/">Início</a></li>
+          <li class="tem-submenu">
+            <a href="projetos.html">Projetos ▾</a>
+            <ul class="submenu">
+              <li><a href="projetos.html#resgate">Resgate</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+              <li><a href="projetos.html#doacoes">Doações</a></li>
+              <li><a href="projetos.html#lar-temporario">Lar Temporário</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html" class="ativo">Cadastro & Adoção</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="../index.html#/painel">Painel (Dados)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo-principal" class="container">
+    <section class="cadastro-container">
+      <div class="cabecalho-pagina">
+        <h2>Formulário de Adesão & Voluntariado</h2>
+        <p>
+          Preencha os campos abaixo com os seus dados. Os registros são salvos diretamente no seu navegador
+          através do <strong>localStorage</strong>, permitindo consultar e gerenciar as participações a qualquer momento.
+        </p>
+      </div>
+
+      <form id="formCadastro" class="formulario-ong" novalidate>
+        <!-- 1. DADOS PESSOAIS -->
+        <fieldset>
+          <legend>1. Informações Pessoais</legend>
+
+          <div class="campo">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome completo" autocomplete="name" aria-describedby="nome-help">
+            <small id="nome-help" class="help-text">Informe nome e sobrenome (mínimo de 3 caracteres).</small>
+          </div>
+
+          <div class="grid">
+            <div class="campo col-6">
+              <label for="cpf">CPF *</label>
+              <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" maxlength="14" inputmode="numeric" aria-describedby="cpf-help">
+              <small id="cpf-help" class="help-text">Validação ativa com verificação de dígitos.</small>
+            </div>
+
+            <div class="campo col-6">
+              <label for="data-nascimento">Data de Nascimento *</label>
+              <input type="date" id="data-nascimento" name="dataNascimento" required max="2010-01-01">
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="campo col-6">
+              <label for="telefone">Telefone Celular / WhatsApp *</label>
+              <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000" maxlength="15" autocomplete="tel">
+            </div>
+
+            <div class="campo col-6">
+              <label for="email">E-mail de Contato *</label>
+              <input type="email" id="email" name="email" required placeholder="exemplo@email.com" autocomplete="email">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 2. ENDEREÇO & VIACEP -->
+        <fieldset>
+          <legend>2. Localização (Busca Automática por CEP)</legend>
+
+          <div class="grid">
+            <div class="campo col-4">
+              <label for="cep">CEP *</label>
+              <input type="text" id="cep" name="cep" required placeholder="00000-000" maxlength="9" inputmode="numeric" aria-describedby="cep-help">
+              <small id="cep-help" class="help-text">Preenchimento automático via API ViaCEP.</small>
+            </div>
+
+            <div class="campo col-8">
+              <label for="endereco">Logradouro / Bairro *</label>
+              <input type="text" id="endereco" name="endereco" required placeholder="Rua, Avenida e Bairro">
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="campo col-6">
+              <label for="cidade">Cidade *</label>
+              <input type="text" id="cidade" name="cidade" required list="listaCidades" placeholder="Sua cidade">
+              <datalist id="listaCidades">
+                <option value="São Paulo"></option>
+                <option value="Guarulhos"></option>
+                <option value="Campinas"></option>
+                <option value="São Bernardo do Campo"></option>
+                <option value="Santo André"></option>
+                <option value="Osasco"></option>
+              </datalist>
+            </div>
+
+            <div class="campo col-6">
+              <label for="estado">Estado *</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecione o Estado</option>
+                <option value="SP" selected>São Paulo (SP)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="PR">Paraná (PR)</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 3. COMO AJUDAR -->
+        <fieldset>
+          <legend>3. Como Você Deseja Ajudar?</legend>
+          <div class="opcoes-ajuda">
+            <label class="opcao-radio">
+              <input type="radio" id="voluntario" name="ajuda" value="voluntario" checked>
+              <span><strong>Quero ser voluntário(a)</strong> — auxiliar em resgates, passeios e cuidados gerais</span>
+            </label>
+
+            <label class="opcao-radio">
+              <input type="radio" id="adocao" name="ajuda" value="adocao">
+              <span><strong>Quero adotar um cão</strong> — dar um lar seguro e amoroso para um animal</span>
+            </label>
+
+            <label class="opcao-radio">
+              <input type="radio" id="doacao" name="ajuda" value="doacao">
+              <span><strong>Quero realizar doações recorrentes</strong> — medicamentos, ração ou verba</span>
+            </label>
+
+            <label class="opcao-radio">
+              <input type="radio" id="lar-temporario" name="ajuda" value="lar-temporario">
+              <span><strong>Quero oferecer lar temporário</strong> — acolhimento durante a fase de recuperação</span>
+            </label>
+          </div>
+
+          <div class="campo" style="margin-top: 16px;">
+            <label for="mensagem">Mensagem ou Observações:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre sua disponibilidade ou preferência por algum animal..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- 4. CONFIRMAÇÃO -->
+        <fieldset>
+          <legend>4. Termo de Compromisso</legend>
+          <label class="opcao-checkbox">
+            <input type="checkbox" id="termos" name="termos" required>
+            <span>Confirmo que as informações fornecidas são verdadeiras e estou ciente do compromisso com o bem-estar animal.</span>
+          </label>
+        </fieldset>
+
+        <div class="acoes-formulario">
+          <button type="submit" class="botao botao-grande">Salvar Cadastro no Sistema</button>
+          <button type="reset" class="botao botao-secundario">Limpar Formulário</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2026 Cão Sem Dono. Todos os direitos reservados. |
+        Thamiris Alves de Souza | RGM 49791052 | ADS
+      </p>
+    </div>
+  </footer>
+
+  <!-- Biblioteca Externa -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Scripts Modulares -->
+  <script src="../js/storage.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    // Configura formulário específico nesta página estática caso não esteja na SPA
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("formCadastro");
+      if (form) {
+        ValidationService.configurarFormulario(form);
+
+        // Preenche com parâmetro da URL se houver (ex: ?ajuda=adocao)
+        const params = new URLSearchParams(window.location.search);
+        const tipoAjuda = params.get("ajuda");
+        if (tipoAjuda) {
+          const radio = form.querySelector(`input[name="ajuda"][value="${tipoAjuda}"]`);
+          if (radio) radio.checked = true;
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nome = form.nome.value.trim();
+          const cpf = form.cpf.value.trim();
+          const email = form.email.value.trim();
+          const telefone = form.telefone.value.trim();
+          const cep = form.cep.value.trim();
+          const endereco = form.endereco.value.trim();
+          const cidade = form.cidade.value.trim();
+          const estado = form.estado.value;
+          const ajuda = form.querySelector("input[name='ajuda']:checked").value;
+          const mensagem = form.mensagem.value.trim();
+          const termos = form.termos.checked;
+
+          if (!nome || !cpf || !email || !telefone || !cep || !endereco || !cidade || !estado || !termos) {
+            App.mostrarToast("Preencha todos os campos obrigatórios (*).", "aviso");
+            return;
+          }
+
+          if (!ValidationService.validarCPF(cpf)) {
+            App.mostrarToast("CPF inválido. Verifique os dígitos.", "erro");
+            return;
+          }
+
+          StorageService.salvarCadastro({
+            nome, cpf, email, telefone, cep, endereco, cidade, estado, ajuda,
+            ajudaTexto: form.querySelector("input[name='ajuda']:checked").parentNode.innerText.trim(),
+            mensagem
+          });
+
+          if (typeof confetti === "function") {
+            try { confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } }); } catch (e) {}
+          }
+
+          App.mostrarModal({
+            titulo: "🎉 Cadastro Concluído!",
+            mensagem: `Obrigado(a), <strong>${nome}</strong>! Seus dados foram salvos com sucesso no <strong>localStorage</strong>. Você pode visualizá-los e gerenciá-los a qualquer momento no Painel.`,
+            botaoTexto: "Ver no Painel",
+            aoConfirmar: () => {
+              window.location.href = "../index.html#/painel";
+            }
+          });
+
+          App.mostrarToast("Cadastro salvo no localStorage com sucesso!", "sucesso");
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
